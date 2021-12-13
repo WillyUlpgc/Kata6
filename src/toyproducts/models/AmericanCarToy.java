@@ -2,13 +2,13 @@ package toyproducts.models;
 
 import toyproducts.Toy;
 
-public class HelicopterToy implements Toy {
+public class AmericanCarToy implements Toy{
     private final Integer serialNumber;
     private final String type;
     
-    public HelicopterToy(Integer serialNumber){
+    public AmericanCarToy(Integer serialNumber){
         this.serialNumber = serialNumber;
-        this.type = "helicopter";
+        this.type = "American Car";
     }
     
     public Integer getSerialNumber(){
@@ -31,7 +31,7 @@ public class HelicopterToy implements Toy {
 
     @Override
     public String toString() {
-        return "HelicopterToy{" + "serialNumber=" + serialNumber + '}';
+        return "AmericanCarToy{" + "serialNumber=" + serialNumber + '}';
     }
     
     

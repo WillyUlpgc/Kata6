@@ -1,4 +1,4 @@
-package toys;
+package Business;
 
 public class SerialNumberGenerator {
     private Integer serialNumber = 0;

@@ -1,7 +1,10 @@
 package toys;
 
-import toyproducts.models.HelicopterToy;
-import toyproducts.models.CarToy;
+import Business.ToyBusiness;
+import branches.AmericanToyBusiness;
+import branches.AsianToyBusiness;
+import toyproducts.models.AmericanHelicopterToy;
+import toyproducts.models.AmericanCarToy;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.stream.Collectors;
@@ -10,7 +13,7 @@ import toyproducts.Toy;
 public class Kata6 {
 
     public static void main(String[] args) {
-        ToyBusiness toyBusiness = new ToyBusiness();
+        ToyBusiness toyBusiness = new AmericanToyBusiness();
         ArrayList<Toy> toys = new ArrayList<>();
            
         Scanner in = new Scanner(System.in);
