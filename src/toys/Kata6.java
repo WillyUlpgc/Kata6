@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 public class Kata6 {
 
     public static void main(String[] args) {
-        SerialNumberGenerator sn = new SerialNumberGenerator();
+        ToyBusiness toyBusiness = new ToyBusiness();
         ArrayList<Car> cars = new ArrayList<>();
         ArrayList<Helicopter> helicopters = new ArrayList<>();
         
@@ -17,18 +17,12 @@ public class Kata6 {
             line = in.nextLine();
             switch(line) {
                 case "car":
-                    Car car = new Car(sn.next());
-                    car.pack();
-                    car.label();
-                    cars.add(car);
+                    cars.add(toyBusiness.createCar());
                     System.out.println("Built cars: " + cars.stream().map(c -> c.getSerialNumber().toString()).collect(Collectors.joining(", ")));
                     break;
                     
                 case "helicopter":
-                    Helicopter helicopter = new Helicopter(sn.next());
-                    helicopter.pack();
-                    helicopter.label();
-                    helicopters.add(helicopter);
+                    helicopters.add(toyBusiness.createHelicopter());
                     System.out.println("Built helicopters: " + helicopters.stream().map(c -> c.getSerialNumber().toString()).collect(Collectors.joining(", ")));
                     break;
                     
